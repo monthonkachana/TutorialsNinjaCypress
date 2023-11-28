@@ -1,0 +1,207 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-28T03:20:41.244Z",
+    "end": "2023-11-28T03:21:08.941Z",
+    "duration": 27697,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bdbe400c-1f7d-49e0-a4c8-0a0c01f37cfe",
+      "title": "",
+      "fullFile": "cypress\\e2e\\E-comerc.cy.js",
+      "file": "cypress\\e2e\\E-comerc.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "625f8e80-c9ac-4713-a36d-9c947ac9399c",
+          "title": "TutorialsNinja",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Register",
+              "fullTitle": "TutorialsNinja Register",
+              "timedOut": null,
+              "duration": 6926,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://tutorialsninja.com/demo/index.php?route=account/register');\ncy.wait(2000);\ncy.get('#input-firstname').type(\"max\");\ncy.get('#input-lastname').type(\"monthon\");\ncy.get('#input-email').type(\"maxmonthon6@gmail.com\");\ncy.get('#input-telephone').type(\"09999999999\");\ncy.get('#input-password').type(\"Aa112233\");\ncy.get('#input-confirm').type(\"Aa112233\");\ncy.get('[type=\"checkbox\"]').click({\n  focus\n});\ncy.get('.pull-right > .btn').click();\ncy.get('#content > h1').should('have.text', 'Your Account Has Been Created!');\ncy.get('.pull-right > .btn').click();",
+              "err": {},
+              "uuid": "db40583b-9717-4845-bcf3-c66b68d2a4a9",
+              "parentUUID": "625f8e80-c9ac-4713-a36d-9c947ac9399c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Home Page",
+              "fullTitle": "TutorialsNinja Home Page",
+              "timedOut": null,
+              "duration": 2338,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://tutorialsninja.com/demo/index.php?route=common/home');\ncy.get('.nav.navbar-nav').contains('Desktops').should('exist');\ncy.get('.nav.navbar-nav').contains('Laptops & Notebooks').should('exist');\ncy.get('.nav.navbar-nav').contains('Components').should('exist');\ncy.get('.nav.navbar-nav').contains('Tablets').should('exist');\ncy.get('.nav.navbar-nav').contains('Software').should('exist');\ncy.viewport('iphone-6');\ncy.visit('https://tutorialsninja.com/demo/index.php?route=common/home');\ncy.viewport('macbook-15');\ncy.visit('https://tutorialsninja.com/demo/index.php?route=common/home');\ncy.get('h3').should('have.text', 'Featured');",
+              "err": {},
+              "uuid": "bfa15f7f-6e0e-4b6b-926b-7cb841a71fe5",
+              "parentUUID": "625f8e80-c9ac-4713-a36d-9c947ac9399c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search Functionality",
+              "fullTitle": "TutorialsNinja Search Functionality",
+              "timedOut": null,
+              "duration": 2599,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://tutorialsninja.com/demo/index.php?route=common/home');\ncy.get('.form-control').type(\"Maxmonthon\").clear();\ncy.get('.form-control').type(\"Macbook\");\ncy.get('.input-group-btn > .btn').click();\ncy.get(\"#content > div:nth-child(8) > div:nth-child(2) > div > div:nth-child(2) > div.button-group > button:nth-child(1)\").click({\n  focus\n});\ncy.get(':nth-child(1) > .product-thumb > .image > a > .img-responsive').click({\n  focus\n});",
+              "err": {},
+              "uuid": "822c68e0-9920-4da0-a810-8d2b43865a2c",
+              "parentUUID": "625f8e80-c9ac-4713-a36d-9c947ac9399c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Product Detail",
+              "fullTitle": "TutorialsNinja Product Detail",
+              "timedOut": null,
+              "duration": 3750,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://tutorialsninja.com/demo/index.php?route=product/product&product_id=43');\ncy.get(\"#content > div > div.col-sm-4 > div.btn-group > button:nth-child(1)\").click();\ncy.get('.alert').invoke('text').then(actualText => {\n  cy.log(`Actual Text: ${actualText}`);\n});\ncy.get('#input-quantity').clear().type('2');\ncy.get('#button-cart').click();\ncy.get('#cart > .btn').click();\ncy.get('[href=\"https://tutorialsninja.com/demo/index.php?route=checkout/cart\"] > strong').click();\ncy.wait(1000);\ncy.go('back');",
+              "err": {},
+              "uuid": "77284528-4112-4ca8-a0d8-b251f74e2611",
+              "parentUUID": "625f8e80-c9ac-4713-a36d-9c947ac9399c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cart Functionality",
+              "fullTitle": "TutorialsNinja Cart Functionality",
+              "timedOut": null,
+              "duration": 2640,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://tutorialsninja.com/demo/index.php?route=checkout/cart');\ncy.get(':nth-child(1) > :nth-child(4) > .input-group > .form-control').clear().type(\"1\");\ncy.get(':nth-child(1) > :nth-child(4) > .input-group > .input-group-btn > .btn-primary').click();\ncy.get('.alert').contains('Success: You have modified your shopping cart!').should('exist');\n//ปุ่ม remove\ncy.get(':nth-child(2) > :nth-child(4) > .input-group > .input-group-btn > .btn-danger').click();\ncy.get(':nth-child(1) > .panel-heading > .panel-title > .accordion-toggle > .fa').click({\n  focus\n});\ncy.get('#input-coupon').type(\"coupon2023giveme{enter}\");\ncy.get('#button-coupon').click();\ncy.get('.alert').invoke('text').then(actualText => {\n  cy.log(`Actual Text: ${actualText}`);\n});",
+              "err": {},
+              "uuid": "658ed438-d0f3-4c51-ad9c-a91c547a25fb",
+              "parentUUID": "625f8e80-c9ac-4713-a36d-9c947ac9399c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Checkout Payment Page",
+              "fullTitle": "TutorialsNinja Checkout Payment Page",
+              "timedOut": null,
+              "duration": 7293,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://tutorialsninja.com/demo/index.php?route=checkout/checkout');\ncy.wait(3000);\ncy.get('#button-payment-address').click();\ncy.get('#input-payment-firstname').type(\"maxmonthon\");\ncy.get('#input-payment-lastname').type(\"allsome\");\ncy.get('#input-payment-company').type(\"areatech\");\ncy.get('#input-payment-address-1').type(\"118/88 \");\ncy.get('#input-payment-city').type(\"bangkok\");\ncy.get('#input-payment-postcode').type(\"Aa11\");\ncy.get('#input-payment-country').type(\"Thai\");\ncy.get('#input-payment-zone').select(\"Conwy\");\ncy.get('#button-payment-address').click({\n  focus\n});\ncy.get(':nth-child(3) > .form-control').type(\"chunked\");\ncy.get('[type=\"checkbox\"]').click({\n  focus\n});\ncy.get('#button-payment-method').click({\n  focus\n});",
+              "err": {},
+              "uuid": "27a94320-2118-4b36-a4a7-5cabf116f2e1",
+              "parentUUID": "625f8e80-c9ac-4713-a36d-9c947ac9399c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "db40583b-9717-4845-bcf3-c66b68d2a4a9",
+            "bfa15f7f-6e0e-4b6b-926b-7cb841a71fe5",
+            "822c68e0-9920-4da0-a810-8d2b43865a2c",
+            "77284528-4112-4ca8-a0d8-b251f74e2611",
+            "658ed438-d0f3-4c51-ad9c-a91c547a25fb",
+            "27a94320-2118-4b36-a4a7-5cabf116f2e1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 25546,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true,
+        "sccreenshotOnRunFailure": true,
+        "ignoreVideos": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false
+      },
+      "version": "5.2.0"
+    }
+  }
+}
